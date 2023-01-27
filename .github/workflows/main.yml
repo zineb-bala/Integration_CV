@@ -11,7 +11,7 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: files.000webhost.com
-        username: 93100
-        password: G#)XgrdL8B!(L4lheJGn
+        server: ${{ secrets.FTP_SERVERS }}
+        username: ${{ secrets.FTP_USERS }}     
+        password: ${{ secrets.FTP_PWD}}
         server-dir : public_html/
